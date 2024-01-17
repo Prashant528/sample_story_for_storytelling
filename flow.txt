@@ -1,0 +1,23 @@
+main()
+|
+|---> Fitness tracker
+|     |
+|     |---> Meal tracker
+|     |     |
+|     |     |---> Log Meals
+|     |     |
+|     |     |---> View Meals
+|     |
+|     |---> Exercise tracker
+|           |
+|           |---> Log Exercise
+|           |
+|           |---> View Exercises
+|
+|---> Screen time tracker
+|     |
+|     |---> Log Screen Time
+|     |
+|     |---> View Screen Time
+|
+|---> Exit
