@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        p {
+            font-size: large;
+        }
+
+        a {
+            color: #04AA6D; /* Set the text color to a specific color (e.g., blue) */
+            text-decoration: none; /* Remove underlines from links */
+            font-weight: bold; /* Make the text bold */
+            transition: color 0.3s ease; /* Add a smooth color transition on hover */
+        }
+
+        a:hover {
+            color: #1d7e5b; /* Change the text color on hover */
+        }
+
+        #left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+
+        #upper-subsection {
+            flex: 1;
+            /* Add styles for the graph container */
+        }
+
+        #lower-subsection {
+            /* Add styles for the unordered list */
+        }
+
+        #right-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #story-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #story-content {
+            /* Add styles for the story content */
+        }
+
+
+        button {
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            width: 70%;
+            cursor: pointer;
+            }
+
+            #navigation-buttons {
+                position: fixed;
+                bottom: 20px;
+                left: 65%;
+                display: flex;
+            }
+
+        #next-button {
+            margin-left: auto; /* Pushes the 'Next' button to the right */
+        }
+
+        #previous-button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-section">
+        <div id="upper-subsection">
+            <!-- Add your control flow diagram here -->
+            <!-- You can use a library like D3.js or Chart.js for the graph -->
+            <h4>Control Flow Diagram</h4>
+                <pre class="mermaid">
+                    graph TD 
+                    A[<a href='http://google.com'>main</a>] --> B[<a href='http://google.com'>fitness_tracker</a>]
+                    A --> C[<a href='http://google.com'>screen_tracker</a>] 
+                    B --> D[<a href='http://google.com'>exercise_tracker</a>]
+                    B --> E[<a href='http://google.com'>meal_tracker</a>]
+                    C --> F[<a href='http://google.com'>view</a>]
+                    C --> G[<a href='http://google.com'>log</a>]
+                    D --> H[<a href='http://google.com'>view</a>]
+                    D --> I[<a href='http://google.com'>log</a>]
+                    E --> J[<a href='http://google.com'>view</a>]
+                    E --> K[<a href='http://google.com'>log</a>]
+        
+        
+            </pre>
+        
+            <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true });
+
+            const storyPages = [
+            // Each element of this array represents a page in the story
+            `Page:1
+            <p> 
+                In the bustling offices of HabitTrack Innovations, Manny, the boss, had developed a liking for two talented managers, Fitty and Screeny. The two managers however found themselves locked in a silent rivalry when Manny asked both of them to create innovative habit-tracking products for the upcoming annual conference.
+                </p>
+
+                <p>
+                Fitty, a diligent and hardworking manager, immersed himself in brainstorming sessions. He was a gym-freak and had been feeling a need for an app that tracked his diet and exercises. That sparked his motivation and he started to make an app where he could log his daily workout and meals.
+                </p>
+
+                <p>
+                On the other hand, Screeny, was a visual learner and had been wondering how impactful it could be if he could see his screen-time data of all of his devices in a single dashboard. He had been thinking of some graphs and visualizations that would be super useful and yet easy for normal people to understand.
+                </p>
+
+                <p>
+                    As the conference date approached, both managers hit a roadblock. Fitty had a working demo for logging his exercises and food habits, while Screeny had a functional dashboard for viewing screen time. However, neither product was impressive enough.
+                </p>
+                `,
+            `Page:2
+            <p>
+                    A week before the conference, Manny called Fitty and Screeny separately to discuss their progress. Impressed by the ideas but displeased with their individual efforts, Manny faced a challenge: how to salvage the situation. In a moment of inspiration, Manny proposed combining Fitty's logging functionalities with Screeny's viewing features.
+                </p>
+
+                <p>
+                    Manny tasked Fitty with assisting Screeny in the logging aspects and vice versa. Reluctantly, the two managers joined forces, realizing that cooperation might be helpful after all. After the collaborative effort, Fitty and Screeny both had their products ready. Fitty could now log and view his fitness data and Screeny could log and view his device usage data.
+                </p>
+
+                <p>
+                    Just a day before the conference, Manny had another eureka moment and he asked Fitty and Screeny to send their code as soon as possible. The once separate products could actually be seamlessly merged together, creating a well-rounded habit-tracking solution. Manny worked through the night and prepared the super-app Habit Tracker for tracking fitness as well as screen usage time.
+                </p>
+
+                <p>
+                    At the conference, Manny unveiled the collaborative product to an impressed audience. The combination of Fitty's hardworking approach and Screeny's smart ideas resulted in a product that exceeded everyone's expectations.
+                </p>`,
+            `<p>Page 3: The epic saga continues...</p>`,
+            // Add more pages as needed
+        ];
+
+        let currentPage = 0;
+
+        // Display the initial story content
+        document.getElementById('story-content').innerHTML = storyPages[currentPage];
+
+        // Add event listener for the 'Next' button
+        document.getElementById('next-button').addEventListener('click', () => {
+            if (currentPage < storyPages.length - 1) {
+                currentPage++;
+                document.getElementById('story-content').innerHTML = storyPages[currentPage];
+            }
+        });
+
+        // Add event listener for the 'Previous' button
+        document.getElementById('previous-button').addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                document.getElementById('story-content').innerHTML = storyPages[currentPage];
+            }
+        });
+            </script>
+        </div>
+        <div id="lower-subsection">
+            <p>Characters:</p>
+            <ul>
+                <li><p><a href="#">Manny : main()</a></p></li>
+                <li><p><a href="#">Fitty : fitness_tracker()</a></p></li>
+                <li><p><a href="#">Screeny : screen_tracker()</a></p></li>
+
+                <!-- Add more clickable texts as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <div id="right-section">
+        <div id="story-title">The Combination</div>
+        <div id="story-content">
+
+        </div>
+        <div id="navigation-buttons">
+            <button id="previous-button">Previous</button>
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+    
+</body>
+</html>
