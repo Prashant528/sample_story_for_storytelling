@@ -95,7 +95,7 @@
             <!-- You can use a library like D3.js or Chart.js for the graph -->
             <h4>Control Flow Diagram</h4>
             <!-- You can load mermaid from mermaid_backup here-->
-            <img id="image" src="tmp/graphs_new-1.png" alt="Image 1">
+            <img id="image" src="tmp/graphs_new-2.png" alt="Image 1">
         
             <script type="module">
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -103,6 +103,11 @@
 
             const storyPages = [
             // Each element of this array represents a page in the story
+            `<p> 
+                This is a story about a habit tracking app.
+                <br><br><br> Click next to start the story...
+                </p>
+            `,
             `Page:1
             <p> 
                 In the bustling offices of HabitTrack Innovations, Manny, the boss, had developed a liking for two talented managers, Fitty and Screeny. The two managers however found themselves locked in a silent rivalry when Manny asked both of them to create innovative habit-tracking products for the upcoming annual conference.
@@ -173,13 +178,16 @@
                 currentPage++;
                 document.getElementById('story-content').innerHTML = storyPages[currentPage];
 
-                if(currentPage==0 || currentPage==1){
+                if(currentPage==0){
+                    imageElement.src = images[2];
+                }
+                else if(currentPage==1 || currentPage==2){
                     imageElement.src = images[0];
                 }
-                else if(currentPage==2){
+                else if(currentPage==3){
                     imageElement.src = images[1];
                 }
-                else if(currentPage==3 ||currentPage==4){
+                else if(currentPage==4 ||currentPage==5){
                     imageElement.src = images[2];
                 }
 
@@ -193,13 +201,16 @@
                 currentPage--;
                 document.getElementById('story-content').innerHTML = storyPages[currentPage];
                 
-                if(currentPage==0 || currentPage==1){
+                if(currentPage==0){
+                    imageElement.src = images[2];
+                }
+                else if(currentPage==1 || currentPage==2){
                     imageElement.src = images[0];
                 }
-                else if(currentPage==2){
+                else if(currentPage==3){
                     imageElement.src = images[1];
                 }
-                else if(currentPage==3 ||currentPage==4){
+                else if(currentPage==4 ||currentPage==5){
                     imageElement.src = images[2];
                 }
 
@@ -208,13 +219,72 @@
             }
         });
             </script>
+
+
+
+<script>
+    function highlightText(target) {
+        // Get the story paragraph element
+        const storyParagraph = document.getElementById('story-content');
+
+        // Get the text content of the story
+        const storyText = storyParagraph.textContent;
+        console.log(storyText)
+        // Use a regular expression to find all occurrences of the target text
+        const regex = new RegExp(target, 'g');
+        const matches = storyText.matchAll(regex);
+        console.log(matches);
+        var extra_text = '';
+        // Iterate over matches and apply highlighting
+        for (const match of matches) {
+            var start = match.index;
+
+            var end = start + match[0].length;
+            var offset = extra_text.length;
+
+            start = start+offset;
+            end = end+offset;
+
+            console.log("Match length = ", match[0].length);
+            console.log(storyParagraph.innerHTML.substring(0, start));
+            console.log(storyParagraph.innerHTML.substring(end));
+
+
+            // Wrap the matching text with a span element having the highlight class
+            extra_text = '<span class="highlight">${}</span>';
+            console.log("Substring = ", storyText.substring(start, end));
+            const highlightedText = `<span class="highlight">${storyText.substring(start, end)}</span>`;
+
+
+            storyParagraph.innerHTML = storyParagraph.innerHTML.substring(0, start+3) +
+                highlightedText + storyParagraph.innerHTML.substring(end);
+
+            console.log(storyParagraph.innerHTML.substring(0, start) +
+                highlightedText + storyParagraph.innerHTML.substring(end));
+
+
+            
+        }
+
+
+        // Remove highlighting after 3 seconds
+        setTimeout(() => {
+            const highlightedText = document.querySelectorAll('.highlight');
+            highlightedText.forEach((element) => {
+                element.classList.remove('highlight');
+            });
+        }, 3000);
+    }
+</script>
+
+
         </div>
         <div id="lower-subsection">
             <p>Characters:</p>
             <ul>
-                <li><p><a href="#">Manny : main()</a></p></li>
-                <li><p><a href="#">Fitty : fitness_tracker()</a></p></li>
-                <li><p><a href="#">Screeny : screen_tracker()</a></p></li>
+                <li><p onclick="highlightText('Manny')">Manny : main()</p></li>
+                <li><p onclick="highlightText('Fitty')">Fitty : fitness_tracker()</p></li>
+                <li><p onclick="highlightText('Screeny')">Screeny : screen_tracker()</p></li>
 
                 <!-- Add more clickable texts as needed -->
             </ul>
