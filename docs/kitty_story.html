@@ -86,17 +86,40 @@
         #previous-button {
             margin-right: 10px;
         }
+        div.scroll {
+            margin: 4px, 4px;
+            padding: 4px;
+            height: 80px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            text-align: justify;
+        }
+        div.scroll2 {
+            margin: 4px, 4px;
+            padding: 4px;
+            height: 180px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            text-align: justify;
+        }
+
+        .image_padded {
+            padding-left: 150px;
+        }
+
+        .image_non_padded {
+            padding-left: 0px;
+        }
     </style>
 </head>
 <body>
     <div id="left-section">
-        <p><a href="kitty_story.html">Go to kitty story</a></p>
-        <div id="upper-subsection">
+        <div id="upper-subsection" class="scroll">
             <!-- Add your control flow diagram here -->
             <!-- You can use a library like D3.js or Chart.js for the graph -->
-            <h4>Control Flow Diagram</h4>
+            <h4>Steps</h4>
             <!-- You can load mermaid from mermaid_backup here-->
-            <img id="image" src="tmp/graphs_new-2.png" alt="Image 1">
+            <img id="image" src="tmp_2/graphs_kitty-7.png" alt="Image 1" class="">
         
             <script type="module">
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -105,47 +128,91 @@
             const storyPages = [
             // Each element of this array represents a page in the story
             `<p> 
-                This is a story about a habit tracking app.
+                This is a story about the process of making a contribution to the OSS projects.
                 <br><br><br> Click next to start the story...
                 </p>
             `,
             `Page:1
             <p> 
-                In the bustling offices of HabitTrack Innovations, Manny, the boss, had developed a liking for two talented managers, Fitty and Screeny. The two managers however found themselves locked in a silent rivalry when Manny asked both of them to create innovative habit-tracking products for the upcoming annual conference.
+                Once upon a time in the mystical land, there lived a curious and determined girl named Kitty who was in love with books, magic and mythical creatures. 
+                She stumbled upon a fascinating book about dragons and the secrets of the code-knitters and their magical spells. 
+                Intrigued by the prospect of summoning her own <b>dragon</b>, Kitty delved into the world of <b>code-knitters</b>.
+
                 </p>`,
                 `
                 Page:2
                 <p>
-                Fitty, a diligent and hardworking manager, immersed himself in brainstorming sessions. He was a gym-freak and had been feeling a need for an app that tracked his diet and exercises. That sparked his motivation and he started to make an app where he could log his daily workout and meals.
+                    The code-knitters, a unique species, possessed the power to create <b>spells</b> using specially arranged codes that could 
+                    summon magnificent dragons. Kitty learned that these code-knitters were always on 
+                    the lookout for new members to join their ranks and contribute to the summoning 
+                    of even mightier dragons. They had some sort of a <b>golden book</b>. If a code-knitter 
+                    was able to add a magic spell to the book, they'd be gifted a dragon.
                 </p>
 
                 <p>
-                On the other hand, Screeny, was a visual learner and had been wondering how impactful it could be if he could see his screen-time data of all of his devices in a single dashboard. He had been thinking of some graphs and visualizations that would be super useful and yet easy for normal people to understand.
+                    Eager to own a dragon herself, Kitty followed the instructions in the book. 
+                    First, she had to become a citizen of one of the <b>code-knitter kingdoms</b>.
+                     After she decided on the kingdom she wanted to be a part of, she made a 
+                     long journey and arrived at its gate. A large wooden <b>map</b> greeted her, 
+                     illustrating the kingdom's layout. As she explored, Kitty discovered the
+                     lively and vibrant kingdom of the code-knitters.
+
                 </p>`,
                 `
                 Page:3
                 <p>
-                    As the conference date approached, both managers hit a roadblock. Fitty had a working demo for logging his exercises and food habits, while Screeny had a functional dashboard for viewing screen time. However, neither product was impressive enough.
+                    The code-knitters had a tradition of gathering in large <b>groups</b> to discuss 
+                    spells, dragons, and other magical matters. Though welcomed into the group, 
+                    Kitty found it challenging to grasp the complexities of their discussions. 
+                    Undeterred, she decided to navigate the new kingdom, acknowledging that some 
+                    tasks would be complex.
                 </p>
                 `,
             `Page:4
             <p>
-                    A week before the conference, Manny called Fitty and Screeny separately to discuss their progress. Impressed by the ideas but displeased with their individual efforts, Manny faced a challenge: how to salvage the situation. In a moment of inspiration, Manny proposed combining Fitty's logging functionalities with Screeny's viewing features.
+                Determined, Kitty sought the guidance of a master who taught new citizens. 
+                The master welcomed her, providing insights into the <b>history of the codebook</b>
+                and the <b>behaviors expected</b> in the kingdom. He emphasized the importance of
+                 <b>understanding fellow code-knitters'</b> spells to enhance her chances of summoning
+                  mightier dragons.
                 </p>
 
                 <p>
-                    Manny tasked Fitty with assisting Screeny in the logging aspects and vice versa. Reluctantly, the two managers joined forces, realizing that cooperation might be helpful after all. After the collaborative effort, Fitty and Screeny both had their products ready. Fitty could now log and view his fitness data and Screeny could log and view his device usage data.
+                    Venturing into the kingdom, Kitty experienced both ecstasy and nervousness. 
+                    Her love for book and her curiousness drove her to the library of the kingdom.
+                     There, devoured the books and discovered that even the kingdom of code-knitters
+                      faced problems— <b>issues</b> in the codebook and the dragons created thus far. She also 
+                      found a huge catalog of these issues.
+                    
+
                 </p>`,
                 `
                 Page:5
                 <p>
-                    Just a day before the conference, Manny had another eureka moment and he asked Fitty and Screeny to send their code as soon as possible. The once separate products could actually be seamlessly merged together, creating a well-rounded habit-tracking solution. Manny worked through the night and prepared the super-app Habit Tracker for tracking fitness as well as screen usage time.
-                </p>
-
-                <p>
-                    At the conference, Manny unveiled the collaborative product to an impressed audience. The combination of Fitty's hardworking approach and Screeny's smart ideas resulted in a product that exceeded everyone's expectations.
+                    Staying with the master, Kitty learned the intricacies of the kingdom. 
+                    Once confident in her understanding, the master entrusted her with a <b>wooden codebook</b>, 
+                    allowing her to experiment with new spells unlike the sacred golden codebook. He asked her
+                     to bring the wooden codebook back if she had any working spell so that he can update 
+                     the golden codebook.
                 </p>`,
-            `<p>Page 6: The epic saga continues...</p>`,
+                `
+                Page:6
+                <p>
+                    Most problems were deeply magical and incomprehensible, but Kitty stumbled upon 
+                    a few that she could understand and solve. Excited at the prospect of obtaining 
+                    her own dragon, she picked a manageable issue, consulted fellow code-knitters, and 
+                    tirelessly experimented in her wooden codebook. After a long trial, it finally seemed 
+                    to work, her <b>first magic spell</b>.
+                </p>`,
+                `
+                Page:7
+                    <p>
+                Confident in her new spell, Kitty approached the master to <b>update the golden codebook</b>.
+                 He meticulosly checked her spells and finally <b>obliged</b>, and as a result, Kitty summoned a small, exquisite <b>dragon</b>. 
+                 While delighted, she aimed for something grander and set her sights on acquiring an even bigger dragon 
+                 in the enchanting world of code-knitters. The journey of Kitty, the aspiring code-knitter,
+                  had only just begun.
+                </p>`,
             // Add more pages as needed
         ];
 
@@ -157,9 +224,14 @@
 
         
         const images = [
-                'tmp/graphs_new-1.png',
-                'tmp/graphs_new-2.png',
-                'tmp/graphs_new-3.png',
+                'tmp_2/graphs_kitty-1.png',
+                'tmp_2/graphs_kitty-2.png',
+                'tmp_2/graphs_kitty-3.png',
+                'tmp_2/graphs_kitty-4.png',
+                'tmp_2/graphs_kitty-5.png',
+                'tmp_2/graphs_kitty-6.png',
+                'tmp_2/graphs_kitty-7.png',
+
             ];
 
 
@@ -180,16 +252,16 @@
                 document.getElementById('story-content').innerHTML = storyPages[currentPage];
 
                 if(currentPage==0){
-                    imageElement.src = images[2];
+                    imageElement.src = images[6];
                 }
-                else if(currentPage==1 || currentPage==2){
-                    imageElement.src = images[0];
+                else{
+                    imageElement.src = images[currentPage-1];
                 }
-                else if(currentPage==3){
-                    imageElement.src = images[1];
-                }
-                else if(currentPage==4 ||currentPage==5){
-                    imageElement.src = images[2];
+
+                if (currentIndex ==0 || currentPage>2) {
+                    imageElement.className = 'image_non_padded';
+                } else {
+                    imageElement.className = 'image_padded';
                 }
 
             }
@@ -203,16 +275,10 @@
                 document.getElementById('story-content').innerHTML = storyPages[currentPage];
                 
                 if(currentPage==0){
-                    imageElement.src = images[2];
+                    imageElement.src = images[6];
                 }
-                else if(currentPage==1 || currentPage==2){
-                    imageElement.src = images[0];
-                }
-                else if(currentPage==3){
-                    imageElement.src = images[1];
-                }
-                else if(currentPage==4 ||currentPage==5){
-                    imageElement.src = images[2];
+                else{
+                    imageElement.src = images[currentPage-1];
                 }
 
                 // document.getElementById('mermaid').innerHTML = mermaidCodeArray[currentPage];
@@ -280,12 +346,23 @@
 
 
         </div>
-        <div id="lower-subsection">
+        <div id="lower-subsection" class="scroll2">
             <p>Characters:</p>
             <ul>
-                <li><p onclick="highlightText('Manny')">Manny : main()</p></li>
-                <li><p onclick="highlightText('Fitty')">Fitty : fitness_tracker()</p></li>
-                <li><p onclick="highlightText('Screeny')">Screeny : screen_tracker()</p></li>
+                <li><p onclick="highlightText('Manny')">Dragon : Contribution</p></li>
+                <li><p onclick="highlightText('Fitty')">Code-knitters : Developers</p></li>
+                <li><p onclick="highlightText('Screeny')">Spells : Code</p></li>
+                <li><p onclick="highlightText('Screeny')">Kingdom : Main repo</p></li>
+                <li><p onclick="highlightText('Screeny')">Golden book : Main branch</p></li>
+                <li><p onclick="highlightText('Screeny')">Map : Project structure</p></li>
+                <li><p onclick="highlightText('Screeny')">Groups : Forums</p></li>
+                <li><p onclick="highlightText('Screeny')">History : Changelogs</p></li>
+                <li><p onclick="highlightText('Screeny')">Behaviors : Code of Conduct</p></li>
+                <li><p onclick="highlightText('Screeny')">Understanding other's work : Documentation</p></li>
+                <li><p onclick="highlightText('Screeny')">Wooden Book : Clone/fork</p></li>
+                <li><p onclick="highlightText('Screeny')">Issues : Issues</p></li>
+                <li><p onclick="highlightText('Screeny')">Update golden book : Pull Request</p></li>
+                <li><p onclick="highlightText('Screeny')">Kitty's dragon : PR Merge</p></li>
 
                 <!-- Add more clickable texts as needed -->
             </ul>
@@ -293,7 +370,7 @@
     </div>
 
     <div id="right-section">
-        <div id="story-title">The Combination</div>
+        <div id="story-title">Kitty and her dragon</div>
         <div id="story-content">
 
         </div>

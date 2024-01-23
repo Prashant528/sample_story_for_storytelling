@@ -1,0 +1,38 @@
+
+
+<script>
+    function highlightText(target) {
+        // Get the story paragraph element
+        const storyParagraph = document.getElementById('story');
+
+        // Get the text content of the story
+        const storyText = storyParagraph.innerText;
+
+        // Use a regular expression to find all occurrences of the target text
+        const regex = new RegExp(target, 'g');
+        const matches = storyText.matchAll(regex);
+
+        // Iterate over matches and apply highlighting
+        for (const match of matches) {
+            const start = match.index;
+            const end = start + match[0].length;
+
+            // Create a span element with the highlight class
+            const span = document.createElement('span');
+            span.className = 'highlight';
+
+            // Wrap the matching text with the span element
+            storyParagraph.innerHTML = storyParagraph.innerHTML.substring(0, start) +
+                `<span class="highlight">${storyParagraph.innerHTML.substring(start, end)}</span>` +
+                storyParagraph.innerHTML.substring(end);
+        }
+
+        // Remove highlighting after 3 seconds
+        setTimeout(() => {
+            const highlightedText = document.querySelectorAll('.highlight');
+            highlightedText.forEach((element) => {
+                element.classList.remove('highlight');
+            });
+        }, 3000);
+    }
+</script>

@@ -1,0 +1,30 @@
+<html>
+  <body>
+    Here is one mermaid diagram:
+    <pre class="mermaid">
+            graph TD 
+            A[Want to make a contribution?]
+            A --> B[Find a repo]
+            B --> C[Understand project structure] 
+            C --> D[Join the discussion forum]
+            D --> E[Changelogs]
+            D --> F[Code of conduct]
+            D --> G[Documentation]
+            D --> H[Issues]
+            E --> I[Create a clone/fork]
+            F --> I 
+            G --> I 
+            H --> I 
+            I --> J[Make changes]
+            J --> K[Create a pull request]
+            K --> L[Contribution made]
+
+
+    </pre>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+</html>
