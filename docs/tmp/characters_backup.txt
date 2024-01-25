@@ -1,0 +1,21 @@
+<div id="lower-subsection" class="scroll2">
+            <p>Characters:</p>
+            <ul>
+                <li><p onclick="highlightText('Manny')">Dragon : Contribution</p></li>
+                <li><p onclick="highlightText('Fitty')">Code-knitters : Developers</p></li>
+                <li><p onclick="highlightText('Screeny')">Spells : Code</p></li>
+                <li><p onclick="highlightText('Screeny')">Kingdom : Main repo</p></li>
+                <li><p onclick="highlightText('Screeny')">Golden book : Main branch</p></li>
+                <li><p onclick="highlightText('Screeny')">Map : Project structure</p></li>
+                <li><p onclick="highlightText('Screeny')">Groups : Forums</p></li>
+                <li><p onclick="highlightText('Screeny')">History : Changelogs</p></li>
+                <li><p onclick="highlightText('Screeny')">Behaviors : Code of Conduct</p></li>
+                <li><p onclick="highlightText('Screeny')">Understanding other's work : Documentation</p></li>
+                <li><p onclick="highlightText('Screeny')">Wooden Book : Clone/fork</p></li>
+                <li><p onclick="highlightText('Screeny')">Issues : Issues</p></li>
+                <li><p onclick="highlightText('Screeny')">Update golden book : Pull Request</p></li>
+                <li><p onclick="highlightText('Screeny')">Kitty's dragon : PR Merge</p></li>
+
+                <!-- Add more clickable texts as needed -->
+            </ul>
+        </div>
