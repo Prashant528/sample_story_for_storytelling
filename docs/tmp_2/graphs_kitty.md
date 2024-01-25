@@ -25,3 +25,7 @@
 ## 7
 
 ![diagram](./graphs_kitty-7.png)
+
+## 8
+
+![diagram](./graphs_kitty-8.png)

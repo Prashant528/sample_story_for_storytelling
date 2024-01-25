@@ -2,7 +2,15 @@
 
 ```mermaid
 graph TD
-A[Want to make a contribution?]
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
 ```
 
 ## 2
@@ -10,33 +18,46 @@ A[Want to make a contribution?]
 ```mermaid
 graph TD
 
-A[Want to make a contribution?]
-A --> B[Find a repo]
-B --> C[Understand project structure] 
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
+
 ```
 
 ## 3
 
 ```mermaid
 graph TD
-A[Want to make a contribution?]
-A --> B[Find a repo]
-B --> C[Understand project structure] 
-C --> D[Join the discussion forum]
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
 ```
 
 ## 4
 
 ```mermaid
 graph TD
-A[Want to make a contribution?]
-A --> B[Find a repo]
-B --> C[Understand project structure] 
-C --> D[Join the discussion forum]
-D --> E[Changelogs]
-D --> F[Code of conduct]
-D --> G[Documentation]
-D --> H[Issues]
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
 
 ```
 
@@ -44,15 +65,16 @@ D --> H[Issues]
 
 ```mermaid
 graph TD
-A[Want to make a contribution?]
-A --> B[Find a repo]
-B --> C[Understand project structure] 
-C --> D[Join the discussion forum]
-D --> E[Changelogs]
-D --> F[Code of conduct]
-D --> G[Documentation]
-D --> H[Issues]
-E --> I[Create a clone/fork]
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
+E --> I[Create a fork \n *Silver Codebook*]
 F --> I 
 G --> I 
 H --> I 
@@ -63,19 +85,20 @@ H --> I
 
 ```mermaid
 graph TD
-A[Want to make a contribution?]
-A --> B[Find a repo]
-B --> C[Understand project structure] 
-C --> D[Join the discussion forum]
-D --> E[Changelogs]
-D --> F[Code of conduct]
-D --> G[Documentation]
-D --> H[Issues]
-E --> I[Create a clone/fork]
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
+E --> I[Create a fork \n *Silver Codebook*]
 F --> I 
 G --> I 
 H --> I 
-I --> J[Make changes]
+I --> J[Create a local copy \n *Wooden Codebook*]
 
 ```
 
@@ -83,20 +106,44 @@ I --> J[Make changes]
 
 ```mermaid
 graph TD
-A[Want to make a contribution?]
-A --> B[Find a repo]
-B --> C[Understand project structure] 
-C --> D[Join the discussion forum]
-D --> E[Changelogs]
-D --> F[Code of conduct]
-D --> G[Documentation]
-D --> H[Issues]
-E --> I[Create a clone/fork]
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
+E --> I[Create a fork \n *Silver Codebook*]
 F --> I 
 G --> I 
 H --> I 
-I --> J[Make changes]
-J --> K[Create a pull request]
-K --> L[Contribution made]
+I --> J[Create a local copy \n *Wooden Codebook*]
+J --> K[Make changes \n *first magic spell*]
 
+```
+
+## 8
+
+```mermaid
+graph TD
+A[Want to make a contribution?\n *ice dragon*]
+A --> N[Find a suitable project\n *codeland*]
+N --> B[Find the main repo \n *Golden Codebook*]
+B --> C[Understand project structure\n *Layout of codeland*] 
+C --> D[Join the discussion forum \n *Forums*]
+D --> E[Changelogs \n *history of the codebook*]
+D --> F[Code of conduct \n *behaviors expected*]
+D --> G[Documentation \n *scriptures* ]
+D --> H[Issues \n *issues*]
+E --> I[Create a fork \n *Silver Codebook*]
+F --> I 
+G --> I 
+H --> I 
+I --> J[Create a local copy \n *Wooden Codebook*]
+J --> K[Make changes \n *first magic spell*]
+K --> O[Push to the fork \n *update Silver Codebook*]
+O --> L[Create a pull request \n *request to merge*]
+L --> M[Contribution made \n *own ice-dragon*]
 ```
