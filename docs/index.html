@@ -74,8 +74,8 @@
 
             #navigation-buttons {
                 position: fixed;
-                bottom: 20px;
-                left: 5%;
+                bottom: 10px;
+                left: 40%;
                 display: flex;
             }
 
@@ -111,17 +111,30 @@
         .image_non_padded {
             padding-left: 0px;
         }
+
+        #story-image {
+            max-width: 70%;
+        }
+
+        #page_image {
+            max-width: 100%;
+            height: auto; /* This property ensures the aspect ratio is preserved */
+}
     </style>
 </head>
 <body>
     <div id="left-section">
         <div id="story-title">Kitty and her dragon</div>
         <div id="story-content">
-
         </div>
+
+        <div id="story-image">
+            <img id="page_image" src="new_exports/image_10.png" alt="Image 1" class="">
+        </div>
+
         <div id="navigation-buttons">
-            <button id="previous-button">Previous</button>
-            <button id="next-button">Next</button>
+            <button id="previous-button">&#9665;</button>
+            <button id="next-button">&#9655;</button>
         </div>
     </div>
 
@@ -149,7 +162,9 @@
                 magic and mythical creatures. 
                 One day, she stumbled upon a fascinating book about dragons, the secrets of the code-knitters and their magical spells. 
                 Intrigued by the prospect of summoning her own <b>ice-dragon</b>, Kitty delved into the world of <b>code-knitters</b>.
-
+                `,
+                `
+                Page:2
                 <p>
                     The code-knitters, a unique species, possessed the power to create <b>spells</b> and summon magnificent dragons. 
                     They lived harmoniously in their tiny kingdoms called "<b>Codelands</b>", knitting the spells together.  
@@ -161,7 +176,7 @@
                 </p>
                 </p>`,
                 `
-                Page:2
+                Page:3
                 
 
                 <p>
@@ -181,7 +196,7 @@
 
                 </p>`,
                 `
-                Page:3
+                Page:4
                 <p> 
                     Kitty was excited and wasted no time to explore the Codeland. All of the code-knitters were friendly and
                     she was given a <b>handbook</b> that she read to find helpful information about the Codeland and the dragons.
@@ -192,7 +207,7 @@
                     tasks would indeed be complex for her.
                 </p>
                 `,
-            `Page:4
+            `Page:5
             <p>
                 Determined, Kitty sought the guidance of a <b>mentor</b> who taught new citizens. 
                 He  welcomed her and showed her the treasured Golden Codebook of the Codeland.
@@ -201,7 +216,9 @@
                 understanding the spells already existing in Golden Codebook created by fellow code-knitters
                  to enhance her chances of summoning mightier dragons.
                 </p>
-
+            `,
+            `
+            Page:6
                 <p>
                     Venturing into the kingdom, Kitty experienced both ecstasy and nervousness. 
                     Her love for book and her curiousness drove her to the library of the kingdom.
@@ -213,7 +230,7 @@
 
                 </p>`,
                 `
-                Page:5
+                Page:7
                 <p>
     
                     Staying with the mentor, Kitty learned the intricacies of the Golden Codebook. The most shocking event
@@ -232,7 +249,7 @@
                     </p>
                     `,
                     `
-                    Page: 6
+                    Page: 8
                     <p>
                     Kitty was very glad when she received a Silver Codebook where she could make her changes but making changes in
                     Silver started becoming a bit unwieldy as there were a lots of hit and trials in the beginning. To solve that
@@ -242,7 +259,7 @@
                     the Silver Codebook with those changes. 
                 </p>`,
                 `
-                Page:7
+                Page:9
                 <p>
                     After getting the hang of the different books, Kitty wanted to focus on solving the issues of the Codeland
                     to win the favor of the elders and other fellow code-knitters.
@@ -253,7 +270,7 @@
                     to work, her <b>first magic spell</b>.
                 </p>`,
                 `
-                Page:8
+                Page:10
                     <p>
                 Confident in her new spell, Kitty <b>updated the changes</b> in a new page of her Silver Codebook.
                 She then made a <b>request to merge</b> her spells to the Golden Codebook. An elder
@@ -278,14 +295,28 @@
         
         const images = [
                 'tmp_2/graphs_kitty-1.png',
-                'tmp_2/graphs_kitty-2.png',
+                'tmp_2/graphs_kitty-2_1.png',
+                'tmp_2/graphs_kitty-2_2.png',
                 'tmp_2/graphs_kitty-3.png',
-                'tmp_2/graphs_kitty-4.png',
+                'tmp_2/graphs_kitty-4_1.png',
+                'tmp_2/graphs_kitty-4_2.png',
                 'tmp_2/graphs_kitty-5.png',
                 'tmp_2/graphs_kitty-6.png',
                 'tmp_2/graphs_kitty-7.png',
                 'tmp_2/graphs_kitty-8.png',
+            ];
 
+            const page_images = [
+                'new_exports/image_1.png',
+                'new_exports/image_2.png',
+                'new_exports/image_3.png',
+                'new_exports/image_4.png',
+                'new_exports/image_5.png',
+                'new_exports/image_6.png',
+                'new_exports/image_7.png',
+                'new_exports/image_8.png',
+                'new_exports/image_9.png',
+                'new_exports/image_10.png',
             ];
 
 
@@ -313,14 +344,25 @@
         document.getElementById('next-button').addEventListener('click', () => {
             if (currentPage < storyPages.length - 1) {
                 const imageElement = document.getElementById('image');
+                const fiction_imageElement = document.getElementById('page_image');
+
                 currentPage++;
                 document.getElementById('story-content').innerHTML = storyPages[currentPage];
 
                 if(currentPage==0){
-                    imageElement.src = images[7];
+                    imageElement.src = images[9];
+                    fiction_imageElement.src = page_images[9];
+                    console.log("Current page = ", currentPage-1);
+                    console.log("Story image = ", page_images[9] );
+
                 }
                 else{
+                    console.log("Current page = ", currentPage-1);
                     imageElement.src = images[currentPage-1];
+                    console.log("Graph image = ", images[currentPage-1] );
+                    fiction_imageElement.src = page_images[currentPage-1];
+                    console.log("Story image = ", page_images[currentPage-1] );
+
 
                 }
                 scrollToBottom()
@@ -332,14 +374,26 @@
         document.getElementById('previous-button').addEventListener('click', () => {
             if (currentPage > 0) {
                 const imageElement = document.getElementById('image');
+                const fiction_imageElement = document.getElementById('page_image');
+
                 currentPage--;
                 document.getElementById('story-content').innerHTML = storyPages[currentPage];
                 
                 if(currentPage==0){
-                    imageElement.src = images[7];
+                    imageElement.src = images[9];
+                    fiction_imageElement.src = page_images[9];
+
                 }
                 else{
+                    console.log("Current page = ", currentPage-1);
+
                     imageElement.src = images[currentPage-1];
+                    console.log("Graph image = ", images[currentPage-1] );
+
+                    fiction_imageElement.src = page_images[currentPage-1];
+                    console.log("Story image = ", page_images[currentPage-1] );
+
+
                 }
 
                 // document.getElementById('mermaid').innerHTML = mermaidCodeArray[currentPage];
