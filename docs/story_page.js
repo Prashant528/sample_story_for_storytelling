@@ -39,6 +39,7 @@ const storyPages = [
         `
         Page:3
         <p>
+        Kitty went up to a hill and tried to make sense of how the Codeland was structured.
         </p>`,
         `
         Page:4
