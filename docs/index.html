@@ -119,7 +119,37 @@
         #page_image {
             max-width: 100%;
             height: auto; /* This property ensures the aspect ratio is preserved */
+        }
+
+        image{
+            max-width: 100%;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
 }
+        b {
+                    color: rgba(17, 4, 4, 0.466); /* Optional: Add styling to the bold elements */
+                    cursor: pointer;
+                }
+
+                #tooltip {
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    z-index: 1;
+                }
+
     </style>
 </head>
 <body onload="load_whole_graph()">
@@ -131,12 +161,22 @@
         <div id="story-image">
             <img id="page_image" src="new_exports/image_10.png" alt="Image 1" class="">
         </div>
+<!--         
+        <div>
+            <code>
+                const greeting = 'Hello, World!';
+                console.log(greeting);
+            </code>
+        </div> -->
+        
 
         <div id="navigation-buttons">
             <button id="previous-button">&#9665;</button>
             <button id="next-button">&#9655;</button>
         </div>
     </div>
+    <div id="tooltip"></div>
+
 
     <div id="right-section">
         <div id="upper-subsection" class="scroll">
