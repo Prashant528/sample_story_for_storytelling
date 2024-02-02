@@ -143,7 +143,7 @@
             <!-- Add your control flow diagram here -->
             <!-- You can use a library like D3.js or Chart.js for the graph -->
             <!-- You can load mermaid from mermaid_backup here-->
-            <img id="image" alt="Image 1" class="">
+            <!-- <img id="image" alt="Image 1" class=""> -->
         
             <script type="module">
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -200,6 +200,7 @@
             currentPage++;
 
             imageElements.push(newImage);
+            console.log("Current graph image = ", newImage.src);
         };
 
         const removeLastImage=()=>{
@@ -234,7 +235,6 @@
 
         // Display the initial story content
         document.getElementById('story-content').innerHTML = storyPages[currentPage];
-        const imageElement = document.getElementById('image').innerHTML;
 
         // document.getElementById('mermaid').innerHTML = mermaidCodeArray[currentPage];
 
@@ -284,10 +284,6 @@
 
                     //add new image for current page
                     addNewImage(currentPage);
-
-
-
-
                 }
                 scrollToBottom();
 
@@ -356,11 +352,6 @@
                     else{
                         removeLastImage();
                     }
-
-                    
-
-
-
                 }
 
                 // document.getElementById('mermaid').innerHTML = mermaidCodeArray[currentPage];
